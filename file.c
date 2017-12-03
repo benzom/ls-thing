@@ -20,6 +20,7 @@ int main (int argc, char *argv[])
 	while((sd = readdir(dir)) != NULL)
 	{
 		printf(">> %s\n", sd->d_name);
+		sd = readdir(dir);
 	}
 	
 	closedir(dir);
