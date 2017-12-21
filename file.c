@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include <dirent.h>
+#include <dirent.h> /*library for retrieving information on files and directories*/
 #include <string.h>
 
 int main (int argc, char *argv[])
 {
-	DIR *dir;
+	DIR *dir; /*represents a directory stream */
 	struct dirent * sd;
 	char mfile[127];
-
-	if (argc < 2)
+	
+	if (argc < 2) 
 	{
 		strcpy(mfile, ".");
 	}
